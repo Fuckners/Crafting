@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Cama_azul.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles/estilo.css">
+    <title>Crafting!</title>
+</head>
+<body>
+
+    <abbr title="Sair"><input type="radio" name="saientra" id="sair" onchange="tempo(this.id)"></abbr>
+    
+    <abbr title="Entrar"><input type="radio" name="saientra" id="entrar" onchange="tempo(this.id)"></abbr>
+
+    <div id="icon">
+        <img src="imagens/Cama_azul.webp" alt="ícone de usuário">
+    </div>
+
+    <div id="perfil">
+        <h3 id="nick">Fuckner</h3>
+
+        <div class="login">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Fuckners">
+            <label for="senha">Senha</label>
+            <input type="text" id="password" placeholder="12345678">
+            <label for="senha">Confirmar senha</label>
+            <input type="text" id="repassword" placeholder="12345678">
+        </div>
+        <button id="btncadastro" onclick="cadastrar()">Cadastrar</button>
+        <button id="btnlogin" onclick="login()">Login</button>
+
+        <!-- FAZER UMA PARADA PRA SALVAR QUANDO A PESSOA A PERTAR EM SAIR OU FECHAR A TELA -->
+        <button id="btnlogout" onclick="logout()">Sair</button>
+    </div>
+
+    <main>
+        <h2 class="crafttitle">Crafting</h2>
+        <div id="crafting">
+            <div id="construct">
+                <div class="craft slots" id="craft0"></div>
+                <div class="craft slots" id="craft1"></div>
+                <div class="craft slots" id="craft2"></div>
+                <div class="craft slots" id="craft3"></div>
+                <div class="craft slots" id="craft4"></div>
+                <div class="craft slots" id="craft5"></div>
+                <div class="craft slots" id="craft6"></div>
+                <div class="craft slots" id="craft7"></div>
+                <div class="craft slots" id="craft8"></div>
+            </div>
+
+            <div class="finish" ondragover="onDragOver(event)" ondragstart="removeCrafts()"></div>
+        </div>
+
+        <h2 class="inventorytitle">inventory</h2>
+        <div id="inventory">
+            <div id="backpack">
+                <div class="slots" id="slot9"></div>
+                <div class="slots" id="slot10"></div>
+                <div class="slots" id="slo111"></div>
+                <div class="slots" id="slot12"></div>
+                <div class="slots" id="slot13"></div>
+                <div class="slots" id="slot14"></div>
+                <div class="slots" id="slot15"></div>
+                <div class="slots" id="slot16"></div>
+                <div class="slots" id="slot17"></div>
+                <div class="slots" id="slot18"></div>
+                <div class="slots" id="slot19"></div>
+                <div class="slots" id="slot20"></div>
+                <div class="slots" id="slot21"></div>
+                <div class="slots" id="slot22"></div>
+                <div class="slots" id="slot23"></div>
+                <div class="slots" id="slot24"></div>
+                <div class="slots" id="slot25"></div>
+                <div class="slots" id="slot26"></div>
+                <div class="slots" id="slot27"></div>
+                <div class="slots" id="slot28"></div>
+                <div class="slots" id="slot29"></div>
+                <div class="slots" id="slot30"></div>
+                <div class="slots" id="slot31"></div>
+                <div class="slots" id="slot32"></div>
+                <div class="slots" id="slot33"></div>
+                <div class="slots" id="slot34"></div>
+                <div class="slots" id="slot35"></div>
+            </div>
+            <div id="hotbar">
+                <div class="slots" id="slot0"></div>
+                <div class="slots" id="slot1"></div>
+                <div class="slots" id="slot2"></div>
+                <div class="slots" id="slot3"></div>
+                <div class="slots" id="slot4"></div>
+                <div class="slots" id="slot5"></div>
+                <div class="slots" id="slot6"></div>
+                <div class="slots" id="slot7"></div>
+                <div class="slots" id="trash"></div>
+            </div>
+        </div>
+        
+    </main>
+
+    <div class="infinity">
+    </div>
+
+    <script src="scripts/script_game.js"></script>
+    <script src="scripts/script_cadastro.js"></script>
+</body>
+</html>
